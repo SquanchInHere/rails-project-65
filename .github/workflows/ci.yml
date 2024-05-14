@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Ruby 3.x
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+
+      - name: Install bundler
+        run: gem install bundler --user-install
+
+      - name: Install bundler dependencies
+        run: make install
+
+      - name: Run yarn install
+        run: make yarn_install
+
+      - name: Run Rubocop
+        run: make lint_rubocop
+
+      - name: Run Slim Lint
+        run: make lint_slim
+
+      - name: Run tests
+        run: make test
