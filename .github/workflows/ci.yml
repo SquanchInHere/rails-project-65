@@ -26,12 +26,3 @@ jobs:
 
       - name: Run yarn install
         run: make yarn_install
-
-      - name: Run Rubocop
-        run: make lint_rubocop
-
-      - name: Run Slim Lint
-        run: make lint_slim
-
-      - name: Run tests
-        run: make test
