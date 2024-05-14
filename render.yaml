@@ -1,6 +1,6 @@
 databases:
   - name: hexlet-bulletin-board-learn
-    databaseName: bulletin-board
+    databaseName: bulletin_board
     user: tomy
     plan: free
 
