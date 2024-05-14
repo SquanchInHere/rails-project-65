@@ -1,6 +1,6 @@
 databases:
   - name: hexlet-bulletin-board-learn
-    databaseName: bloglearn
+    databaseName: bulletin-board
     user: tomy
     plan: free
 
@@ -15,7 +15,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: blog-learn-instance
+          name: hexlet-bulletin-board-learn
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
