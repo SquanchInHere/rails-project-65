@@ -1,0 +1,16 @@
+- if flash.any?
+  #flash-container.container.my-2
+    - if flash[:notice].present?
+      .alert.alert-info.d-flex.justify-content-between
+        = flash[:notice]
+        button.btn-flash-close.btn-close
+    - if flash[:alert].present?
+      .alert.alert-danger.d-flex.justify-content-between
+        = flash[:alert]
+        button.btn-flash-close.btn-close
+  javascript:
+      document.querySelectorAll('.btn-flash-close').forEach((button)=>{
+          button.addEventListener('click', ()=>{
+              document.querySelector('#flash-container').style.display = 'none'
+          })
+      })

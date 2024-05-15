@@ -5,6 +5,7 @@ set -o errexit
 bundle config set --local without development
 make install
 make yarn_install
+make make_env_file
 make drop_db
 make db_migrate
 make db_seed

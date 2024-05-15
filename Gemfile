@@ -50,6 +50,8 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
+  gem 'dotenv-rails'
+  gem 'faker'
 end
 
 group :development do
@@ -68,3 +70,8 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
 end
+
+gem 'omniauth-github'
+gem 'omniauth-rails_csrf_protection'
+gem 'slim'
+gem 'slim-rails'

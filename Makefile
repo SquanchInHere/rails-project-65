@@ -27,3 +27,8 @@ compile_assets:
 
 clear_assets:
 	bundle exec rails assets:clean
+
+make_env_file:
+	@if [ ! -f .env ]; then \
+		cp .env.example .env; \
+	fi
