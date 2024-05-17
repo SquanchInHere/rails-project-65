@@ -20,5 +20,5 @@ Possibilities of an unregistered user
     - publish, reject advertisements sent for moderation
     - send any advertisements to the archive
 
-## The project works at [link](https://rails-project-65-f60h.onrender.com)
+## The project works at [link](https://hexlet-bulletin-board-learn.onrender.com)
 ## Sample project works at [link](https://rails-bulletin-board-ru.hexlet.app)

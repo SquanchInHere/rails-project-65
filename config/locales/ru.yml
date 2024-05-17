@@ -3,8 +3,6 @@ ru:
   add_category: Добавить категорию
   layouts:
     shared:
-      sign_in:
-        sign_in: Войти
       nav:
         desc: Доска объявлений
         main_page: Главная
@@ -13,6 +11,7 @@ ru:
         admin_panel: Админка
         logout: Выйти
         to_main_page: Главная
+        sign_in: Войти
   web:
     bulletins:
       index:
