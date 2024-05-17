@@ -15,6 +15,6 @@
                       class: 'card-img-top x-object-fit-cover')
               .card-body
                 = link_to(bulletin.title, bulletin)
-                h6.card-subtitlemb-2.text-muted
+                h6.card-subtitle.mb-2.text-muted
                   = time_ago_in_words(bulletin.created_at)
       = paginate @bulletins
