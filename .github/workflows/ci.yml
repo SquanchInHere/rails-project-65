@@ -26,3 +26,6 @@ jobs:
 
       - name: Run yarn install
         run: make yarn_install
+
+      - name: Make env file
+        run: make make_env_file
