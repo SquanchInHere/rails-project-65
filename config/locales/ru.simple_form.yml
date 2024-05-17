@@ -1,0 +1,10 @@
+ru:
+  simple_form:
+    labels:
+      bulletin:
+        title: Заголовок
+        description: Описание
+        category: Категория
+        image: Фотография
+      category:
+        name: Название

@@ -1,0 +1,24 @@
+.row
+  = render 'web/admin/navigation/left_sidebar'
+  .col-md-9
+    h1.h2.mb-4 = t('.title')
+    - if request.path.include?('bulletins')
+      = render 'web/admin/bulletins/search/form'
+    .row.mt-2
+      table.table.table-borderless
+        thead
+          tr
+            th = t('.cell_name')
+            - if params[:filter] == :all
+              th = t('.cell_state')
+            th = t('.cell_created_at')
+            th = t('.cell_actions')
+        tbody
+          - @bulletins.each do |bulletin|
+            tr
+              td = link_to bulletin.title, bulletin
+              - if params[:filter] == :all
+                td = t(".state.#{bulletin.state}")
+              td = time_ago_in_words(bulletin.created_at)
+              td = render 'web/admin/bulletins/shared/actions', bulletin:
+      = paginate @bulletins

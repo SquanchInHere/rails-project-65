@@ -1,0 +1,5 @@
+.row
+  = render 'web/admin/navigation/left_sidebar'
+  .col-md-9
+    h1.h2.mb-4 = t('.title')
+    = render 'web/admin/categories/shared/form', category: @category

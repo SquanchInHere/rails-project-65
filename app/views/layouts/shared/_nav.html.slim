@@ -1,0 +1,36 @@
+.container.mb-2
+  .d-flex.flex-wrap.align-items-center.py-2.border-bottom
+    .navbar.navbar-expand-md.navbar-light.me-auto
+      = link_to t('.desc'), root_path, class: 'navbar-brand me-md-4'
+      #navbarToggler.collapse.navbar-collapse
+        ul.nav.nav-pills.flex-grow-1.navbar-nav.me-auto
+          = link_to t('.to_main_page'),
+                  root_path,
+                  class: 'nav-link text-dark'
+          - if current_user.present?
+            li.nav-item.me-2
+              = link_to t('.my_bulletins'),
+                      profile_path,
+                      class: 'nav-link text-dark'
+            li.nav-item.me-2
+              = link_to t('.add_bulletin'),
+                      new_bulletin_path,
+                      class: 'nav-link text-dark'
+    ul.nav.nav-pills
+      - if current_user.present?
+        li.nav-item.me-2
+        - if current_user&.admin?
+          li.nav-item.me-2
+            = link_to t('.admin_panel'),
+                    admin_root_path,
+                    class: 'nav-link text-dark'
+        li.nav-item.me-2
+          = button_to t('.logout'),
+                  auth_logout_path,
+                  data: { turbo: false },
+                  class: 'nav-link text-dark'
+      - else
+        li
+          = button_to auth_request_path('github'), data: { turbo: false }, class: 'nav-link text-dark' do
+            span class='bi bi-github me-2'
+            span = t('.sign_in')

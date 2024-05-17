@@ -1,0 +1,6 @@
+= simple_form_for bulletin do |f|
+  = f.input :title
+  = f.input :description
+  = f.association :category, collection: Category.all, required: true
+  = f.input :image, required: true
+  = f.submit class: 'mt-2 btn btn-primary'

@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  user: one
+  category: one
+
+two:
+  title: MyString
+  description: MyText
+  user: one
+  category: two
+
+
+under_moderation:
+  title: <%= Faker::Lorem.sentence(word_count: 3) %>
+  description: <%= Faker::Lorem.paragraph %>
+  user: one
+  category: two
+  state: under_moderation

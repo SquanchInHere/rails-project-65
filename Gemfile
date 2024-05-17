@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 ruby '3.2.2'
@@ -50,8 +52,6 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
-  gem 'dotenv-rails'
-  gem 'faker'
 end
 
 group :development do
@@ -71,7 +71,40 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem 'omniauth-github'
-gem 'omniauth-rails_csrf_protection'
-gem 'slim'
-gem 'slim-rails'
+group :production do
+  gem 'pg', '~> 1.5'
+end
+
+gem 'rubocop'
+
+gem 'colorize', '~> 1.1'
+
+gem 'rubocop-rails'
+
+gem 'slim_lint', '~> 0.26.0'
+
+gem 'omniauth-github', '~> 2.0'
+
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
+
+gem 'annotate', '~> 3.2'
+
+gem 'simple_form', '~> 5.3'
+
+gem 'active_storage_validations', '~> 1.1'
+
+gem 'i18n-debug', '~> 1.2'
+
+gem 'rails-i18n', '~> 7.0'
+
+gem 'aasm', '~> 5.5'
+
+gem 'pundit', '~> 2.3'
+
+gem 'dotenv-rails', '~> 3.1'
+
+gem 'faker'
+
+gem 'kaminari'
+
+gem 'ransack'

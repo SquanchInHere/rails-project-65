@@ -1,0 +1,25 @@
+ru:
+  activerecord:
+    attributes:
+      bulletin:
+        title: Заголовок
+        description: Описание
+        category: Категория
+        image: Изображение
+      category:
+        name: Название
+    models:
+      bulletin: объявление
+      category: категорию
+    errors:
+      models:
+        bulletin:
+          attributes:
+            title:
+              blank: не может быть пустым
+            description:
+              blank: не может быть пустым
+            category:
+              required: обязательна
+            image:
+              blank: обязательно

@@ -1,0 +1,152 @@
+ru:
+  app_title: Доска объявлений
+  add_category: Добавить категорию
+  layouts:
+    shared:
+      sign_in:
+        sign_in: Войти
+      nav:
+        desc: Доска объявлений
+        main_page: Главная
+        my_bulletins: Мои объявления
+        add_bulletin: Добавить
+        admin_panel: Админка
+        logout: Выйти
+        to_main_page: Главная
+  web:
+    bulletins:
+      index:
+        title: Объявления
+      search:
+        form:
+          hint:
+            title: Искать по названию объявления
+            category: Выбрать категорию
+          reset: Сброс
+      to_moderate:
+        notice: Объявление отправлено на модерацию
+      publish:
+        notice: Объявление опубликовано
+      reject:
+        notice: Объявление отменено
+      archive:
+        notice: Объявление отправлено в архив
+      create:
+        notice: Объявление успешно создано
+        alert: Необходимо заполнить поля корректно
+      update:
+        notice: Объявление успешно обновлено
+      destroy:
+        notice: Объявление успешно удалено
+      new:
+        add_bulletin: Добавить объявление
+      edit:
+        edit_bulletin: Обновить объявление
+      state:
+        draft: Черновик
+        under_moderation: На модерации
+        published: Опубликовано
+        rejected: Возвращено
+        archived: В архиве
+    auth:
+      callback:
+        notice: Успешно
+    profiles:
+      show:
+        title: Мои объявления
+        new_bulletin: Добавить объявление
+        col:
+          name: Название
+          state: Состояние
+          created_at: Дата создания
+          actions: Действия
+        state:
+          draft: Черновик
+          under_moderation: На модерации
+          published: Опубликовано
+          rejected: Возвращено
+          archived: В архиве
+      search:
+        form:
+          reset: Сброс
+          hint:
+            title: Искать по названию объявления
+            state: По состоянию
+      shared:
+        actions:
+          show: Показать
+          edit: Редактировать
+          archive: В архив
+          to_moderate: На модерацию
+          confirm:
+            archive: В архив ?
+            to_moderate: На модерацию ?
+    admin:
+      navigation:
+        left_sidebar:
+          under_modatation: Объявления на модерации
+          all_bulletins: Все объявления
+          all_categories: Все категории
+      bulletins:
+        under_moderation:
+          title: Объявления на модерации
+          cell_name: Название
+          cell_created_at: Дата создания
+          cell_actions: Действия
+        publish:
+          notice: Успешно опубликовано
+        reject:
+          notice: Успешно возвращено
+        archive:
+          notice: Успешно отправлено в архив
+        index:
+          title: Объявления
+          cell_name: Название
+          cell_state: Состояние
+          cell_created_at: Дата создания
+          cell_actions: Действия
+          notice: Эта секция доступна только для администраторов
+          state:
+            draft: Черновик
+            under_moderation: На модерации
+            published: Опубликовано
+            rejected: Возвращено
+            archived: В архиве
+        shared:
+          actions:
+              show: Показать
+              archive: В архив
+              publish: Опубликовать
+              reject: Вернуть
+              confirm:
+                publish: Опубликовать?
+                archive: В архив?
+                reject: Вернуть?
+        search:
+          form:
+            reset: Сброс
+            hint:
+              title: Искать по названию объявленя
+              state: По состоянию
+      categories:
+        index:
+          title: Категории
+          add_category: Добавить категорию
+          id: ID
+          name: Название
+          actions: Действия
+          edit: Редактировать
+          destroy: Удалить
+          confirm_destroy: Действительно хотите удалить категорию с прикреплёнными к ней объявлениями?
+        create:
+          notice: Категория успешно создана
+          alert: Категорию создать не удалось
+        update:
+          notice: Категория успешно обновлена
+          alert: Категорию обновить не удалось
+        destroy:
+          notice: Категория удалена
+        new:
+          title: Новая категория
+        edit:
+          title: Изменить категорию

@@ -1,27 +1,36 @@
-class Web::AuthController < ApplicationController
-  def callback
-    user_info = request.env['omniauth.auth']['info']
-    user = get_user_by(user_info)
+# frozen_string_literal: true
 
-    if user.save
-      sign_in(user)
-      flash[:notice] = t('.notice')
-    else
-      flash[:alert] = t('.alert')
+module Web
+  class AuthController < Web::ApplicationController
+    def callback
+      user_data = request.env['omniauth.auth']['info']
+      user = get_user_by(user_data)
+
+      if user.save
+        sign_in(user)
+        flash[:notice] = t('.notice')
+      else
+        flash[:alert] = t('.alert')
+      end
+
+      redirect_to root_path
     end
 
-    redirect_to root_path
-  end
+    def logout
+      session.delete('user_id')
+      redirect_to root_path
+    end
 
-  private
+    private
 
-  def sign_in(user)
-    session['user_id'] = user.id
-  end
+    def sign_in(user)
+      session['user_id'] = user.id
+    end
 
-  def get_user_by(user_info)
-    user = User.find_or_initialize_by(email: user_info['email'])
-    user.name = user_info['name']
-    user
+    def get_user_by(user)
+      user = User.find_or_initialize_by(email: user['email'])
+      user.name = user['name']
+      user
+    end
   end
 end

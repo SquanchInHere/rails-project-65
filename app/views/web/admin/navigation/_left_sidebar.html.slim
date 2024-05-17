@@ -1,0 +1,14 @@
+.col-md-3
+  ul.nav.flex-column.nav-pills
+    li.nav-item
+      = nav_link_to t('.under_modatation'),
+              admin_root_path,
+              class: "nav-link link-dark"
+    li.nav-item
+      = nav_link_to t('.all_bulletins'),
+              admin_bulletins_path,
+              class: "nav-link link-dark"
+    li.nav-item
+      = nav_link_to t('.all_categories'),
+              admin_categories_path,
+              class: "nav-link link-dark"
