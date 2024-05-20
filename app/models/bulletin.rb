@@ -16,7 +16,7 @@ class Bulletin < ApplicationRecord
 
   scope :with_category, -> { includes(:category) }
   scope :default_order, -> { order(created_at: :desc) }
-  scope :default_query_bulletins, -> {
+  scope :default_query_bulletins, lambda {
     with_attached_image
       .with_category
       .default_order
