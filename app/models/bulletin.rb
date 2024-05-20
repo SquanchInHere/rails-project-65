@@ -8,15 +8,15 @@ class Bulletin < ApplicationRecord
 
   has_one_attached :image
 
-  validates :title, presence: true, length: { maximum: 50 }
-  validates :description, presence: true, length: { maximum: 1000 }
+  validates :title, presence: true, length: { minimum: 2, maximum: 50 }
+  validates :description, presence: true, length: { minimum: 5, maximum: 1000 }
   validates :image, attached: true,
                     content_type: %i[png jpg jpeg],
                     size: { less_than: 5.megabytes }
 
   scope :with_category, -> { includes(:category) }
   scope :default_order, -> { order(created_at: :desc) }
-  scope :default_query_bulletins, lambda {
+  scope :default_query_bulletins, -> {
     with_attached_image
       .with_category
       .default_order

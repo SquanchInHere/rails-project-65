@@ -36,7 +36,7 @@ module Web
       end
 
       def destroy
-        if @category.bulletins.any?
+        if @category.bulletins.exists?
           flash[:alert] = t('.alert')
         else
           @category.destroy!
